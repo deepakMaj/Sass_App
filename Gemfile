@@ -12,6 +12,10 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'dotenv-rails'
 
+gem 'twitter-bootstrap-rails'
+
+gem 'devise-bootstrap-views'
+
 gem 'milia'
 
 gem 'devise', '~> 4.2'
