@@ -10,6 +10,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
+gem 'bootstrap-datepicker-rails'
+
 gem 'dotenv-rails'
 
 gem 'twitter-bootstrap-rails'

@@ -1,8 +1,5 @@
 class ConfirmationsController < Milia::ConfirmationsController
 
-  skip_before_action :authenticate_tenant!
-  before_action      :set_confirmable, :only => [ :update, :show ]
-
   def update
    if @confirmable.attempt_set_password(user_params)
      self.resource = resource_class.confirm_by_token(params[:confirmation_token])
@@ -39,6 +36,7 @@ class ConfirmationsController < Milia::ConfirmationsController
       if @confirmable.skip_confirm_change_password
         sign_in_tenanted_and_redirect(resource)
       end
+
     else
       log_action( "password set form" )
       flash[:notice] = "Please choose a password and confirm it"
