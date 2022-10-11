@@ -1,2 +1,1 @@
-# README
-Sass_App
+# Sass App
